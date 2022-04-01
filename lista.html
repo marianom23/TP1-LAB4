@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>Tables</title>
+</head>
+<body>
+
+    <h1 align="center">Lista de usuarios </h1>
+
+    <div align="center">
+        <div class="center">
+            <label for="user"><b>Usuario</b></label>
+                <input class="center" type="text" placeholder="Ingrese usuario a buscar" id="searchUser" name="searchUser" required>
+                <br>
+        </div>
+        <div class="center">
+            <input class="cursor_listar_usuarios" id="search" type="button" onclick="searchUsers();" value="Buscar">
+            <br>
+        </div>  
+        <div class="center">
+            <input class="cursor_listar_usuarios_completa" id="listar" type="button" onclick="readUsers();" value="Ver lista usuarios">
+            <br>
+        </div>  
+    </div>
+
+    <div>
+        <table class="table" id="lista-usuarios" align="center" border="1">
+            <thead >
+                <tr>
+                    <th>Id</th>
+                    <th>Usuario</th>
+                    <th>Bloqueado</th>
+                    <th>Apellido</th>
+                    <th>Nombre</th>
+                    <th>Bloquear</th>
+                    <th>Desbloquear</th>
+                </tr>
+            </thead>
+
+            <tbody id="data">
+                <tr>
+                    <th button id="bloquear">Bloquear</th>
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+
+    <script src="./lista.js"></script>
+</body>
+</html>
